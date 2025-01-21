@@ -1,1 +1,25 @@
-Hello Toronto
+---
+layout: default
+title: "Home"
+---
+
+<!-- Welcome Section -->
+<section class="welcome">
+    <h2>Welcome to Toronto Walks</h2>
+    <p>Explore the hidden gems of Toronto through historical and recreational walks. From scenic trails to iconic landmarks, we guide you on unforgettable journeys.</p>
+    <a href="#featured-posts" class="cta">Explore Trails</a>
+</section>
+
+<!-- Featured Posts Section -->
+<section id="featured-posts" class="featured">
+    <h2>Featured Walks</h2>
+    <div class="posts">
+        {% for post in site.posts limit: 3 %}
+        <div class="post">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
