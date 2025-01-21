@@ -1,18 +1,108 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
-    padding: 0;
+    line-height: 1.6;
 }
 
+h1, h2, h3 {
+    font-weight: 600;
+    color: #222;
+}
+
+/* Header */
 header {
+    background: linear-gradient(to right, #4CAF50, #81C784);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.welcome .cta {
+    display: inline-block;
     background-color: #4CAF50;
     color: white;
-    padding: 1rem;
-    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+.welcome .cta:hover {
+    background-color: #FFC107;
+}
+
+/* Featured Posts */
+.featured .posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.post {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post h3 {
+    margin: 1rem;
+    font-size: 1.25rem;
+}
+
+.post p {
+    margin: 0 1rem 1rem;
+    color: #555;
+}
+
+/* Footer */
 footer {
+    background: #4CAF50;
+    color: white;
     text-align: center;
-    padding: 1rem;
-    background: #ddd;
+    padding: 1rem 0;
+}
+
+footer a {
+    color: #FFC107;
+    text-decoration: none;
 }
