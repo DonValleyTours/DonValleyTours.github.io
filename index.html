@@ -3,10 +3,12 @@ layout: default
 title: "Home"
 ---
 
-<section class="welcome">
-    <h2>Welcome to {{ site.title }}</h2>
-    <p>{{ site.description }}</p>
-    <a href="#featured-posts" class="cta">Explore Trails</a>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Don Valley Tours</h1>
+        <p>Discover the hidden gems of Toronto through historical and recreational walks.</p>
+        <a href="#featured-posts" class="cta">Explore Trails</a>
+    </div>
 </section>
 
 <section id="featured-posts" class="featured">
@@ -14,10 +16,75 @@ title: "Home"
     <div class="posts">
         {% for post in site.posts limit: 3 %}
         <div class="post">
-            <img src="{{ post.image }}" alt="{{ post.title }}">
+            <img src="{{ post.image | default: '/assets/img/default.jpg' }}" alt="{{ post.title }}">
             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
             <p>{{ post.excerpt }}</p>
         </div>
         {% endfor %}
     </div>
 </section>
+
+<style>
+.hero {
+    background: url('/assets/img/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.hero .hero-content {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero .cta {
+    background-color: #FFC107;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.featured .posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post h3 {
+    margin: 1rem;
+    font-size: 1.25rem;
+}
+
+.post p {
+    margin: 0 1rem 1rem;
+    color: #555;
+}
+</style>

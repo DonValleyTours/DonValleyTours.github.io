@@ -1,8 +1,54 @@
 ---
 layout: default
 ---
-<article>
+
+<article class="post">
     <h1>{{ page.title }}</h1>
     <p><small>Published on {{ page.date | date: "%B %d, %Y" }}</small></p>
-    {{ content }}
+    <div class="post-content">
+        {{ content }}
+    </div>
+    <nav class="post-navigation">
+        {% if page.previous %}
+        <a href="{{ page.previous.url }}" class="prev">&larr; {{ page.previous.title }}</a>
+        {% endif %}
+        {% if page.next %}
+        <a href="{{ page.next.url }}" class="next">{{ page.next.title }} &rarr;</a>
+        {% endif %}
+    </nav>
 </article>
+
+<style>
+.post {
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+}
+
+.post h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.post-content {
+    margin: 2rem 0;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.post-navigation a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post-navigation a:hover {
+    text-decoration: underline;
+}
+</style>

@@ -9,7 +9,7 @@ categories: neighbourhoods history
 
 The streets along this walk owe their names to the very first summer cottages in Toronto (Castle Frank), a hill that looked like a sugarloaf (Drumsnab), two families that were among the first residents in the area (Hogarth and Playter), and the Duke of Wellington (Wellesley). One of the oldest Toronto neighborhoods, Cabbagetown has rows of interesting old houses and a famous cemetery. The view of the downtown towers from Broadview Ave. is one of the best in the city.
 
-<iframe src="https://www.google.ca/maps/d/edit?mid=1BgTOV-nyYH3luU_NWEtKITNOhVrzBLU&usp=sharing"></iframe>
+<iframe src="https://www.google.com/maps/d/edit?mid=1BgTOV-nyYH3luU_NWEtKITNOhVrzBLU&usp=sharing"></iframe>
 
 ### Highlights
 - Castle Frank Subway Station
